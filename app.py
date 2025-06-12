@@ -4,8 +4,8 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-model_path=os.path.join(os.path.dirname(python),'models','BostonHousePricePrediction.pkl')
-with open(model_path,'rb') as f:
+
+with open('BostonHousePricePrediction.pkl','rb') as f:
     model=pickle.load(f);
     
 @app.route('/')
