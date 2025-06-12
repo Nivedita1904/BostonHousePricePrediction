@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boston Housing Price Prediction</title>
+</head>
+<body>
+    <h2 style="text-align:center", style="color:red">Boston Housing Price Prediction</h2>
+    <form action="/predict" method="post">
+        <body style="background-color:powderblue;"></body>
+
+        <b><label style="text-align:center;">CRIM:</label></b><br>
+        <input type="text" name="CRIM"><br>
+
+        <b><label>ZN:</label></b><br>
+        <input type="text" name="ZN"><br>
+
+        <b> <label>INDUS:</label> </b></b><br>
+        <input type="text" name="INDUS"><br>
+
+        <b><label>CHAS:</label> </b><br>
+        <input type="text" name="CHAS"><br>
+
+        <b><label>NOX:</label></b><br>
+        <input type="text" name="NOX"><br>
+
+        <b>label>RM:</label></b><br>
+        <input type="text" name="RM"><br>
+
+    <b><label>AGE:</label></b><br>
+        <input type="text" name="AGE"><br>
+
+    <b><label>DIS:</label></b><br>
+        <input type="text" name="DIS"><br>
+
+    <b><label>RAD:</label></b><br>
+        <input type="text" name="RAD"><br>
+
+    <b><label>TAX:</label></b><br>
+        <input type="text" name="TAX"><br>
+
+    <b><label>PTRATIO:</label></b><br>
+        <input type="text" name="PTRATIO"><br>
+
+    <b> <label>B:</label></b><br>
+        <input type="text" name="B"><br>
+
+    <b><label>LSTAT:</label></b><br>
+        <input type="text" name="LSTAT"><br>
+
+        <br>
+    <b><input type="submit" value="Predict"></b>
+
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+
+</body>
+</html>
