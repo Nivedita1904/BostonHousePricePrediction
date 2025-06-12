@@ -1,10 +1,11 @@
+import os
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
 app = Flask(__name__)
-
-with open('BostonHousePricePrediction.pkl','rb') as f:
+model_path=os.path.join(os.path.dirname(python),'models','BostonHousePricePrediction.pkl')
+with open(model_path,'rb') as f:
     model=pickle.load(f);
     
 @app.route('/')
